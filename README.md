@@ -1,18 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## React的一个项目
 
-In the project directory, you can run:
+一个小型论坛，可以发帖和回复参观其他用户的home. 主要技术栈为
 
-### `npm start`
+react + react-redux + react-router4 + nodejs + Mysql + elementUI
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###  sql文件夹下存放的是4个数据库
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+bereply_database ：记录用户被回复记录<br><br>
+pageall_database ： 记录所有文章信息<br><br>
+user_database : 记录主要用户信息和文章信息<br><br>
+userall_database :  记录所有用户信息</br><br>
 
-### `npm test`
+
+###  前后端交互使用axios
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
