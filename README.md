@@ -7,63 +7,32 @@ react + react-redux + react-router4 + nodejs + Mysql + elementUI
 
 ###  sql文件夹下存放的是4个数据库
 
-bereply_database ：记录用户被回复记录<br><br>
-pageall_database ： 记录所有文章信息<br><br>
+bereply_database ：记录用户被回复记录，一个用户一个表记录被回复状况<br><br>
+pageall_database ： 记录所有文章信息，一篇文章一个表记录详细信息<br><br>
 user_database : 记录主要用户信息和文章信息<br><br>
-userall_database :  记录所有用户信息</br><br>
+userall_database :  记录所有用户信息，一个用户一个表记录留言记录</br><br>
 
 
 ###  前后端交互使用axios
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6个redux文件分别处理：文章列表，回复列表，登陆的用户信息，回复表单，访客信息，以及新建文章
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### server文件夹下是后台程序，app.js是主路由，exports文件夹下是API模块
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 在回复楼层时可以选择回复整个文章（评论）或是对指定楼层进行评论，并在自己的楼层内给出自己回复的楼层的内容（通过折叠页）
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 由于时间较紧说一些遗憾，残缺功能之后会逐渐完善
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+待完善：
 
-## Learn More
+每个用户注册后会生成一个文件夹，用于存放自己的头像和自定义的主页首部图片，并为文章备份成文件创建空间
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+在评论和发表文章时，可以发送表情框中自带的表情，由于Mysql的text不支持该类字符编码，之后改用文件存储或生成标记
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+可以在文章和评论中穿插上传图片，图片上传API和插入图片后生成指定标签已完成，之后整合将图片上传对应至文章的文件夹
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
